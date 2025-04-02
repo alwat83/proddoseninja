@@ -1,0 +1,16 @@
+<div class="drug-details-container" *ngIf="drug">
+  <h2>{{ drug.name }} Details</h2>
+  <p><strong>Description:</strong> {{ drug.description }}</p>
+  <p><strong>Generic Dosage:</strong> {{ drug.genericDosage }}</p>
+  <p><strong>Frequency:</strong> {{ drug.frequency }}</p>
+  <p><strong>Indications:</strong> {{ drug.indications }}</p>
+  <p><strong>Side Effects:</strong> {{ drug.sideEffects }}</p>
+  <p><strong>Precautions:</strong> {{ drug.precautions }}</p>
+</div>
+<div class="drug-details-container" *ngIf="!drug && errorMessage">
+  <h2>Error</h2>
+  <p>{{ errorMessage }}</p>
+</div>
+<div class="drug-details-container" *ngIf="!drug && !errorMessage">
+  <h2>Loading...</h2>
+</div>

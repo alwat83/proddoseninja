@@ -1,0 +1,21 @@
+<h2>Tracking List</h2>
+<div class="tracking-list">
+  <table class="drug-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Remove</th>
+            <th>Correct Dosage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medication of trackedDrugs">
+            <td>{{ medication.name }}</td>
+            <td>{{ medication.description }}</td>
+            <td><button (click)="removeFromTrackingList(medication)">Remove</button></td>
+            <td><a [routerLink]="['/dosage-correction']">Correct Dosage</a></td>
+        </tr>
+    </tbody>
+  </table>
+</div>

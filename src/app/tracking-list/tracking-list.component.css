@@ -1,0 +1,63 @@
+.tracking-list {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.drug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.drug-table th,
+.drug-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.drug-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.drug-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.drug-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.drug-table button {
+  background-color: var(--error-color);
+  color: var(--text-color-light);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.drug-table button:hover {
+  background-color: #c0392b;
+}
+
+.drug-table a {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.drug-table a:hover {
+  background-color: #2980b9;
+}

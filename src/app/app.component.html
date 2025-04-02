@@ -1,0 +1,22 @@
+<div class="app-container">
+  <header class="app-header">
+    <div class="app-header-container">
+      <img class="app-header-logo" src="logo.png" alt="Dose Ninja Logo" />
+      <nav class="app-nav">
+        <button [routerLink]="['/dashboard']">Dashboard</button>
+        <button [routerLink]="['/medication-search']">Medication Search</button>
+        <button [routerLink]="['/tracking-list']">Tracking List</button>
+        <button [routerLink]="['/dosage-correction']">Dosage Correction</button>
+        <button [routerLink]="['/login']">Login</button>
+        <button [routerLink]="['/register']">Register</button>
+        <button>Sign Out</button>
+      </nav>
+    </div>
+  </header>
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+  <footer>
+    <p>&copy; {{ currentYear }} Dose Ninja. All rights reserved.</p>
+  </footer>
+</div>

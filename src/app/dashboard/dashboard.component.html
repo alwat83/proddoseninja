@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+  <h2>Dashboard</h2>
+  <p>Welcome to Dose Ninja! Here you can:</p>
+  <ul>
+    <li>Search for medications.</li>
+    <li>Add medications to your tracking list.</li>
+    <li>Correct the dosage of your medications.</li>
+  </ul>
+  <div class="dashboard-section">
+    <h3>Medication Summary</h3>
+    <table class="drug-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Generic Dosage</th>
+          <th>Frequency</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let drug of drugs">
+          <td>{{ drug.name }}</td>
+          <td>{{ drug.description }}</td>
+          <td>{{ drug.genericDosage }}</td>
+          <td>{{ drug.frequency }}</td>
+          <td><a [routerLink]="['/drug-details', drug.id]">View Details</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

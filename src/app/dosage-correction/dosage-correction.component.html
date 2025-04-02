@@ -1,0 +1,30 @@
+<div class="correction-form-container">
+  <h2>Dosage Correction</h2>
+  <form [formGroup]="correctionForm" (ngSubmit)="onSubmit()" class="correction-form">
+      <div class="form-group">
+          <label for="drug">Select Medication:</label>
+          <select id="drug" formControlName="drug" class="form-control">
+              <option *ngFor="let drug of allDrugs" [ngValue]="drug">{{ drug.name }}</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="medicationName">Medication Name:</label>
+          <input type="text" id="medicationName" formControlName="medicationName" class="form-control" readonly>
+      </div>
+      <div class="form-group">
+          <label for="dosage">Dosage:</label>
+          <input type="text" id="dosage" formControlName="dosage" class="form-control">
+          <div *ngIf="correctionForm.get('dosage')?.invalid && (correctionForm.get('dosage')?.dirty || correctionForm.get('dosage')?.touched)" class="error-message">
+              <div *ngIf="correctionForm.get('dosage')?.errors?.['required']">Dosage is required.</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="notes">Notes:</label>
+          <textarea id="notes" formControlName="notes" class="form-control"></textarea>
+      </div>
+      <button type="submit" [disabled]="correctionForm.invalid">Submit Correction</button>
+  </form>
+  <div *ngIf="submitted" class="success-message">
+      Dosage correction submitted successfully!
+  </div>
+</div>

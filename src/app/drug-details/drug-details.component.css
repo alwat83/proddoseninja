@@ -1,0 +1,39 @@
+.drug-details-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  color: black; /* Changed to black */
+}
+
+.drug-details-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.drug-details-container p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.drug-details-container strong {
+  font-weight: bold;
+}
+
+.drug-details-container button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.drug-details-container button:hover {
+  background-color: #1877f2;
+}

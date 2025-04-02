@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Search for Medications</h2>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Enter drug name" (input)="searchDrugs()" />
+    <button (click)="searchDrugs()">Search</button>
+  
+    <div *ngIf="searchResults.length > 0">
+      <h3>Search Results</h3>
+      <ul class="results-list">
+        <li *ngFor="let result of searchResults">
+          <a [routerLink]="['/drug-details', result.rxcui]">
+            {{ result.name }} - {{ result.description }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="searchResults.length === 0 && searchTerm !== ''">
+      <p>No results found.</p>
+    </div>
+  </div>
+  
