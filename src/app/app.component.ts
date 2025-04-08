@@ -11,4 +11,9 @@ import { RouterModule } from '@angular/router';
 export class AppComponent {
   currentYear: number = new Date().getFullYear();
   title = 'doseninja';
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

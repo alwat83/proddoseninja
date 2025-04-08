@@ -2,7 +2,10 @@
   <header class="app-header">
     <div class="app-header-container">
       <img class="app-header-logo" src="logo.png" alt="Dose Ninja Logo" />
-      <nav class="app-nav">
+      <button class="hamburger-menu" (click)="toggleMenu()">
+        &#9776;
+      </button>
+      <nav class="app-nav" [class.active]="isMenuOpen">
         <button [routerLink]="['/dashboard']">Dashboard</button>
         <button [routerLink]="['/medication-search']">Medication Search</button>
         <button [routerLink]="['/tracking-list']">Tracking List</button>
